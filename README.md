@@ -1,2 +1,2 @@
 # pyneta
-This is a test to create a merge conflict.
+This is for testing and practicing with git commands.

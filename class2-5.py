@@ -17,23 +17,15 @@ device2 = {
     # "session_log":'my_session.txt',
 }
 
-device3 = {
-    "host":'cisco1.lasthop.io',
-    "username":'pyclass',
-    "password":getpass(),
-    "device_type":'cisco_ios',
-    "session_log":'my_session.txt',
-}
-
-devices = [device1, device2, device3]
+devices = [device1, device2,]
 
 
 for device in devices:
     net_connect = ConnectHandler(**device)
     print(net_connect.find_prompt())
-    if device["device_type"]=="cisco_ios":
-        output = net_connect.send_command("show version")
-        print(output)
+    output = net_connect.send_config_from_file(config_file="class2-5_changes.txt")
+    output += net_connect.save_config()
+    print(output)
     net_connect.disconnect()
 
 

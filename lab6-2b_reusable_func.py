@@ -1,7 +1,7 @@
 import os
 import pyeapi
 from getpass import getpass
-from my_funcs import yaml_load_devices, output_printer
+from lab6_my_funcs import yaml_load_devices, output_printer
 
 
 def main():

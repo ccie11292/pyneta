@@ -3,7 +3,7 @@ import pyeapi
 from jinja2 import FileSystemLoader, StrictUndefined
 from jinja2.environment import Environment
 from getpass import getpass
-from my_funcs import yaml_load_devices
+from lab6_my_funcs import yaml_load_devices
 
 
 if __name__ == "__main__":
